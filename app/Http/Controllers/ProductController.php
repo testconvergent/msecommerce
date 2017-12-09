@@ -681,7 +681,7 @@ class ProductController extends Controller
 			->where('cat2.category_id',$product->sub_cat)
 			->where(TBL_PRODUCT.'.product_id','!=',$product_id)
 			->groupBy(TBL_PRODUCT_TO_IMAGE.'.product_id')->where(TBL_PRODUCT.'.product_status',1)->get();
-			echo "<pre>";print_r($similer_product);die;
+			//echo "<pre>";print_r($product_review);die;
 			$product->cat_name_slag=$this->getCatSlugName($product->parent_cat_id);
 			$product->sub_cat_name_slag=$this->getCatSlugName($product->sub_cat_id);	
 			$data['product'] = $product;

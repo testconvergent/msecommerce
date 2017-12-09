@@ -156,42 +156,15 @@
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
 							<li><a id="m1" class="#" href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> @lang('messages.category') <i class="fa fa-caret-down make_arrow" aria-hidden="true"></i> </a></li>
-							<?php if(Request::segment(1) == 'search')
-							{
-								$category = category();
-								//echo "<pre>";print_r($category);die;
-							?>
-							@if(!$category->isEmpty())
-								@foreach($category as $cat)
-									<li class="dropdown">
-										<a href="search/{{$cat->category_slug}}" class="dropdown-toggle" data-toggle="dropdown">{{@$cat->cat_name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a> 
-										<?php $subcat = sub_cat($cat->category_id);
-										?>
-										@if(!$subcat->isEmpty())
-											<ul class="dropdown-menu open_mmnu">
-												@foreach($subcat as $s_cat)
-													<li><a href="search/{{$cat->category_slug}}/{{$s_cat->category_slug}}">{{@$s_cat->cat_name}}</a></li>
-												@endforeach
-											</ul>
-										@endif
-									</li>
-								@endforeach
-							@endif
-							<?php 
-							}
-							else
-							{
-								$category = category();
-							?>
+							<?php
+								$category = category();	
+							?>								
 								<li><a href="#">@lang('messages.all_offer')</a> </li>
 								@if(!$category->isEmpty())
 									@foreach($category as $cat)
 										<li><a href="search/{{$cat->category_slug}}">{{@$cat->cat_name}}</a> </li>
 									@endforeach
-								@endif
-							<?php
-							}
-							?>
+								@endif							
 						</ul>
 					</div>
 				</nav>
@@ -250,10 +223,10 @@ $('[class="type_search"]').keyup(function(e){
 			$('.autocomplete_search ul li:nth-child('+countUpDownArrow+')').css('background','#ccc');
 		}
         break;
-		case 13: // enter
-		console.log('sffff',countUpDownArrow);
-		var redirectUrl=$('.autocomplete_search ul li:nth-child('+countUpDownArrow+')').attr('data-link');
-		console.log(redirectUrl);
+		case 13: // up
+		console.log('abc',countUpDownArrow);
+		var redirectUrl=$('.autocomplete_search ul li:nth-child('+countUpDownArrow+') div' ).attr('data-link');
+		location.href=redirectUrl;
         break;
         case 40: // down
 		console.log(countUpDownArrow);

@@ -17,6 +17,16 @@
 			@endif
 			</p>	
 		</div>
+		<style>
+		.less{
+			height: 130px;
+			overflow: hidden;
+			text-decoration: underline;
+		}
+		.more{
+			height: 100%;
+		}
+		</style>
 		<!--left area start-->
 		<div class="left_refine small_clopus_style">                                
 			<nav class="navbar1 navbar-default" role="navigation">
@@ -77,7 +87,12 @@
 											</select>	
 										@endif									
 									@if(trim($option->option_type_search)=='multi select' && count($option->optionTypeValue))	
-										<h3>{{$option->option_name}}</h3>	
+										<h3>{{$option->option_name}}</h3>
+										@if(count($option->optionTypeValue)>4)
+										<div class="less_more less">
+										@else
+										<div class="less_more">				
+										@endif
 										@foreach($option->optionTypeValue as $key=>$option_value)
 										<div class="ss_cbox">
 										 <div class="checkbox-group"> 
@@ -91,7 +106,11 @@
 										   </div>
 										 <?php $checkId++; ?>
 											@endforeach
-										</select>	
+											</div>	
+											@if(count($option->optionTypeValue)>4)
+											<div style="cursor: pointer;color: #337ab7;"class="more">More</div>
+											@endif
+										
 									@endif
 								@endforeach
 							@endif
@@ -284,9 +303,11 @@
 		});		
 		$('[name="category"]').change(function(){
 			$('[name="sub_category"]').val('');
+			$('[name="max_price"]').val('');
 			filter_search();
 		});
 		$('[name="sub_category"]').change(function(){
+			$('[name="max_price"]').val('');
 			filter_search();
 		});
 		$('.starr').click(function(){
@@ -377,6 +398,10 @@ function filter_search(){
 	//var sub_category_slug_strin='';
 	
 	}
-	
+$(".more").click(function(){
+if($(this).text()=='More')$(this).html('Less');
+else if($(this).text()=='Less')$(this).html('More');
+$(this).prev().toggleClass('more');
+})
 </script>
 @endsection

@@ -27,6 +27,7 @@ class SearchController extends Controller
 									->leftJoin(TBL_CATEGORY_DESCRIPTION,TBL_CATEGORY_MASTER.'.category_master_id','=',TBL_CATEGORY_DESCRIPTION.'.category_master_id')
 									->where(TBL_CATEGORY_MASTER.'.parent_id',$selectedCateGoryId)
 									->where(TBL_CATEGORY_DESCRIPTION.'.language_id',1)
+									->where('category_status',1)
 									->get();
 		}
 		if(@$any1 && @$any2){
@@ -58,6 +59,7 @@ class SearchController extends Controller
 					$product = $product_filter->where('cat1.category_id',$selectedCateGoryId);
 					$product = $product_filter->where('cat2.category_id',$selectedSubCateGoryId);
 			}
+			//dd($product->get());
 			$request_option_value_array=array();
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 			//dd($request->all());
@@ -74,7 +76,7 @@ class SearchController extends Controller
 				$product = $product_filter->where(TBL_PRODUCT.'.product_price','>=',$request->min_price);
 				$product = $product_filter->where(TBL_PRODUCT.'.product_price','<=',$request->max_price);
 			}
-			$count_product = $product_filter->get();
+			$count_product = $product_filter->get();			
 ////////////////////product option value/////////////////////////////////////////////////////////
 		 $productOptionMAsterDetails=DB::table(TBL_PRODUCT_OPTION_MASTER)
 										->leftJoin(TBL_PRODUCT_OPTION_DETAIL,TBL_PRODUCT_OPTION_MASTER.'.option_master_id','=',TBL_PRODUCT_OPTION_DETAIL.'.option_master_id')
