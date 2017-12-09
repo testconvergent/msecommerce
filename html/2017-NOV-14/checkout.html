@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+	<!--style-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--bootstrape-->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--font-awesome-->
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet"> 
+    
+    
+    
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>    
+
+
+<!--mega_menu_js-->
+<script src="js/pinterest_grid.js"></script>
+    
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* Menu Start */
+		$('#sm').mouseover(function(){
+			$(this).show();
+		});
+		$('#sm').mouseout(function(){
+			$(this).hide();
+		});
+		
+		$('#m1').mouseover(function(){
+			$('.all_menu').show();
+			$('').hide();
+			$('#sm').show();
+			$('.all_menu').pinterest_grid({
+				no_columns: 4,
+				padding_x: 10,
+				padding_y: 10,
+				margin_bottom: 50,
+				single_column_breakpoint: 700
+			});
+		});
+		
+		
+		$('#m1, #m2 ').mouseleave(function(){
+			$('#sm').hide();
+			$('#sm1, #sm2').hide();
+		});
+		/* Menu Start */
+	});
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $(".sign_ffrr").mouseenter(function(){
+        $(".drop_for_signup2").show();
+    });
+	$(".drop_for_signup2").mouseleave(function(){
+		$(".drop_for_signup2").hide();
+	});
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+    $(".menu_dash").mouseenter(function(){
+        $(".dropdown_dash").slideDown();
+    });
+	$(".dropdown_dash").mouseleave(function(){
+		$(".dropdown_dash").slideUp();
+	});
+});
+</script> 
+
+
+
+<script>
+$(document).ready(function(){
+    $(".cclk22").click(function(){
+        $(".hide_box1").slideDown();
+    });
+	$(".cclk").click(function(){
+		$(".hide_box1").slideUp();
+	});
+});
+</script> 
+
+<script>
+$(document).ready(function(){
+    $(".cclk11").click(function(){
+        $(".hide_box2").slideDown();
+    });
+	$(".cclk10").click(function(){
+		$(".hide_box2").slideUp();
+	});
+});
+</script> 
+    
+    
+    
+    
+    
+    
+<style>
+	#blog-landing {
+		position: absolute;
+		max-width: 1170px;
+		width: 100%;
+		top:42px;
+	}
+</style>   
+    
+    
+</head>
+<body>
+	<!--wrapper start-->
+    <div class="wrapper">
+    	<header>
+        	<div class="top_header">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-3 col-sm-3 col-xs-12 logo">
+                        	<a href="#">
+                            	<img src="images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-7 col-sm-6 col-xs-9 make_search">
+                        	<div class="search_head">
+                            	<input class="type_search" type="text" placeholder="Search for Products, Brands and More">
+                                <button class="submit_search" type="submit"><img src="images/search_icon.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-3 make_log no_pad_l">
+                            <div class="log_cart only_reletf">
+                            	<ul>
+                                	<li>
+                                    <a href="javascript:void(0);" class="sign_ffrr">
+                                    <!--<i class="fa fa-lock" aria-hidden="true"></i>-->
+                                    <img src="images/sign.png" alt="">
+                                    </a>
+                                    <div class="drop_for_signup2">
+                                        <a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                                        <a href="seller_signup.html"><i class="fa fa-user-o" aria-hidden="true"></i> Seller Signup</a>
+                                        <a href="customer_signup.html"><i class="fa fa-user-o" aria-hidden="true"></i> Customer Signup</a>
+                                      </div>
+                                    </li>
+                                    <li><span class="cart_item">0</span><a href="#">
+                                    <!--<i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+                                    <img src="images/cart.png" alt="">
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div class="language">
+                            	 <div class="dropdown">
+                                  	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> <img src="images/flag_1.png" alt="">
+                                  	  <span class=""><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#"><img src="images/flag_2.png" alt=""></a></li>
+                                      </ul>
+                                 </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_area">
+            	<div class="container">
+                	<div class="row">
+                    	
+                        <nav class="navbar navbar-inverse">
+                    		<div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li><a id="m1" class="#" href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Category <i class="fa fa-caret-down make_arrow" aria-hidden="true"></i> </a></li>
+                                    <li><a href="#">All Offers</a> </li>
+                                    <li><a href="#">Mobile & Tablets</a> </li>
+                                    <li><a href="#">Electronics</a> </li>
+                                    <li><a href="#">Computers & Gaming</a> </li>
+                                    <li><a href="#">Home & Kitchen</a> </li>
+                                    
+                                </ul>
+                            </div>
+            			</nav>
+                        
+            			<div class="menu-expend">
+                        	<div class="container">
+                            
+					  			<div class="cnt all_menu">
+                                    <div id="sm" class="nwsubmnu" style="display:none;">
+                                        <!-- Product Section -->
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/electronis.png" alt=""> Electronics</a>
+                                                <ul>
+                                                    <li><a href="#">Mobiles</a></li>
+                                                    <li><a href="#">Mobile Accessories</a></li>
+                                                    <li><a href="#">Laptop</a></li>
+                                                    <li><a href="#">Smart Wearable Tech</a></li>
+                                                    <li><a href="#">Desktop PCs</a></li>
+                                                    <li><a href="#">Televisions</a></li>
+                                                    <li><a href="#">Camera</a></li>
+                                                    <li><a href="#">Camera Accessories</a></li>
+                                                    <li><a href="#">Tablets</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/afeliation.png" alt=""> Appliances</a>
+                                                <ul>
+                                                    <li><a href="#">Washing Machine</a></li>
+                                                    <li><a href="#">Refrigerators</a></li>
+                                                    <li><a href="#">Air Conditioners</a></li>
+                                                    <li><a href="#">Geysers</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin blog-landin_graw">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/fashion.png" alt=""> Men's Fashion</a>
+                                                <ul>
+                                                    <li><a href="#">Footwear</a></li>
+                                                    <li><a href="#">Sports wear</a></li>
+                                                    <li><a href="#">Top wear</a></li>
+                                                    <li><a href="#">Innerwear & Sleepwear</a></li>
+                                                    <li><a href="#">Ties, Socks, Caps & more</a></li>
+                                                    <li><a href="#">Kurta, Pyjama & more</a></li>
+                                                    <li><a href="#">Winter wear</a></li>
+                                                    <li><a href="#">Sneakers</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/shoes.png" alt=""> Women's Fashion</a>
+                                                <ul>
+                                                    <li><a href="#">Clothing</a></li>
+                                                    <li><a href="#">Western Wear</a></li>
+                                                    <li><a href="#">Lingerie & Sleepwear</a></li>
+                                                    <li><a href="#">Sandals</a></li>
+                                                    <li><a href="#">Ethnic Wear</a></li>
+                                                    <li><a href="#">Jewellery</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/kids.png" alt=""> Baby & Kids</a>
+                                                <ul>
+                                                    <li><a href="#">Kids Clothing</a></li>
+                                                    <li><a href="#">Boys' Clothing</a></li>
+                                                    <li><a href="#">Kids Footwear</a></li>
+                                                    <li><a href="#">Boys' Footwear</a></li>
+                                                    <li><a href="#">Toys</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/home.png" alt=""> Home & Furniture</a>
+                                                <ul>
+                                                    <li><a href="#">Kitchen & Dining</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Home Decor</a></li>
+                                                    <li><a href="#">Gas Stoves</a></li>
+                                                    <li><a href="#">Lighting</a></li>
+                                                    <li><a href="#">House Keeping & Laundry</a></li>
+                                                    <li><a href="#">Blankets, Quilts & Dohars</a></li>
+                                                    <li><a href="#">Towels</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin blog-landin_graw">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/bool.png" alt=""> Books & More</a>
+                                                <ul>
+                                                    <li><a href="#">Entrance Exams</a></li>
+                                                    <li><a href="#">Academic</a></li>
+                                                    <li><a href="#">Literature & Fiction</a></li>
+                                                    <li><a href="#">Indian Writing</a></li>
+                                                    <li><a href="#">Biographies</a></li>
+                                                    <li><a href="#">Children</a></li>
+                                                    <li><a href="#">Business</a></li>
+                                                    <li><a href="#">Self Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/sports.png" alt=""> Gaming & Accessories</a>
+                                                <ul>
+                                                    <li><a href="#">PS4</a></li>
+                                                    <li><a href="#">Xbox One</a></li>
+                                                    <li><a href="#">Xbox 360</a></li>
+                                                    <li><a href="#">Gaming Consoles</a></li>
+                                                    <li><a href="#">Smart Glasses(VR)</a></li>
+                                                    <li><a href="#">Comics</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/ball.png" alt=""> Sports</a>
+                                                <ul>
+                                                    <li><a href="#">Cricket</a></li>
+                                                    <li><a href="#">Badminton</a></li>
+                                                    <li><a href="#">Football</a></li>
+                                                    <li><a href="#">Camping & Hiking</a></li>
+                                                    <li><a href="#">Swimming</a></li>
+                                                    <li><a href="#">Table Tennis</a></li>
+                                                    <li><a href="#">Tennis</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/meter.png" alt=""> Car & Bike Accessories</a>
+                                                <ul>
+                                                    <li><a href="#">Car Body Cover</a></li>
+                                                    <li><a href="#">Bike Body Cover</a></li>
+                                                    <li><a href="#">Car Air Freshener</a></li>
+                                                    <li><a href="#">Vehicle Washing & Cleaning</a></li>
+                                                    <li><a href="#">Car Sun Shade</a></li>
+                                                    <li><a href="#">Bike Body Cover</a></li>
+                                                    <li><a href="#">Car Air Freshener</a></li>
+                                                    <li><a href="#">Car Mat</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- Product Section -->
+                                     </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+            			
+                   
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        
+        <section class="body_section">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-md-12">
+                    	<div class="inner_head inner_head_2">
+                        	<h2>Checkout</h2>
+                        	<span class="line"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                    	<div class="dash_board">
+                        	
+                          <!--table area-->
+                                    <div class="trip_table history_table">
+                                    	<div class="">
+                                        	<form>
+                                            <div class="table">
+                                            	
+                                                
+                                                <div class="one_row1 hidden-sm hidden-xs">
+                                                    <!--<div class="cell1 tab_head_sheet cc_lolorr">Seller</div>-->
+                                                    <div class="cell1 tab_head_sheet cc_lolorr">Order Items</div>
+                                                    <div class="cell1 tab_head_sheet cc_lolorr">&nbsp;</div>
+                                                    <div class="cell1 tab_head_sheet cc_lolorr">Qty</div>
+                                                    <div class="cell1 tab_head_sheet cc_lolorr">Unit Price</div>
+                                                    <div class="cell1 tab_head_sheet cc_lolorr">Total Price</div>
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 qp_colorr5">
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Order Items</span>
+                                                        <div class="tbl_sl_logo noo_mm"><img src="images/seler.jpg" alt=""></div>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                        <p class="nn_clorr7">Aashvi Creation Floral Print Fashion Jacquard, Georget</p>
+                                                        <p class="nn_clorr7">Sold by : <a href="#" class="adi">Seller - 1</a></p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Qty</span>
+                                                        <span class="qutt44">
+                                                        <select>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          <option>4</option>
+                                                        </select>
+                                                        </span>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Unit Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Total Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                   
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 qp_colorr5">
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Order Items</span>
+                                                        <div class="tbl_sl_logo noo_mm"><img src="images/copm2.png" alt=""></div>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                        <p class="nn_clorr7">Moto E4 Plus (Fine Gold, 32 GB)</p>
+                                                        <p class="nn_clorr7">Sold by : <a href="#" class="adi">Seller - 2</a></p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Qty</span>
+                                                        <span class="qutt44">
+                                                        <select>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          <option>4</option>
+                                                        </select>
+                                                        </span>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Unit Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Total Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                   
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 qp_colorr5">
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Order Items</span>
+                                                        <div class="tbl_sl_logo noo_mm"><img src="images/s14.jpg" alt=""></div>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                        <p class="nn_clorr7">Skybags 26 L Backpack  (Black, White)</p>
+                                                        <p class="nn_clorr7">Sold by : <a href="#" class="adi">Seller - 3</a></p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Qty</span>
+                                                        <span class="qutt44">
+                                                        <select>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          <option>4</option>
+                                                        </select>
+                                                        </span>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Unit Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1">
+                                                    	<span class="W55_1">Total Price</span>
+                                                        <p class="add_ttrr nn_clorr7">$2000</p>
+                                                    </div>
+                                                   
+                                                </div>
+                                                
+                                             
+                                            </div>
+                                            
+                                            
+                                            <div class="sp_tptall_area thss_ff fd_ddaaaa">
+                                               <p><span class="hh_wdww">Sub Total : </span> <span class="hh_wdww22">$6000.00</span></p>
+                                               <p><span class="hh_wdww">Discount :  </span> <span class="hh_wdww22">$0.00</span></p>
+                                               <p><span class="hh_wdww">Shipping :  </span> <span class="hh_wdww22">$0.00</span></p>
+                                               <p><span class="hh_wdww">Total :     </span> <span class="hh_wdww22">$6000</span></p>
+                                               
+                                               <!--<div class="cuponne_area">
+                                                 <input type="text" placeholder="Enter Promotional Code">
+                                                 <input type="submit" value="Apply">
+                                               </div>
+                                               
+                                               <div class="rightt_btn_twoo">
+                                                 <input type="button" class="bb_c" value="Continue Shopping">
+                                                 <input type="button" class="yy_c" value="Place Order">
+                                               </div>-->
+                                               
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                      <!--form-->
+                    	<div class="dash_board full789">
+                            <div class="board_details full788">
+                            
+                                 <div class="details_box">
+                                	<h3>Shipping Address</h3>
+                                    
+                                    <div class="card">
+                                      <label class="radio cclk">
+                                        <input id="radio2" name="radios" checked="" type="radio">
+                                        <span class="outer"><span class="inner"></span></span>Use Saved Address</label>
+                                        
+                                        <label class="radio cclk22">
+                                        <input id="radio1" name="radios" type="radio">
+                                        <span class="outer"><span class="inner"></span></span>Creat New Address</label>
+                                    </div>
+                                    
+                                    
+                                    <div class="below_cckc">
+                                	<div class="info_box">
+                                    	<h4>Address 1</h4>
+                                         
+                                         <div class="checkbox-group qqpostt66"> 
+                                           <input id="checkiz011" type="checkbox"> 
+                                           <label for="checkiz011">
+                                           <span class="check mm_00"></span>
+                                           <span class="box mm_00"></span>
+                                           <p class="ft_text fntnn202">Select This Address</p>
+                                           </label>
+                                         </div>
+                                         
+                                        <div class="info_chart">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="third">John Heard</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Address : Kolkata, West Bengal, 785224, India</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Phone : +1 9856 552 523 </span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Email : johnheard007@gmail.com
+</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info_box">
+                                    	<h4>Address 2</h4>
+                                        
+                                         <div class="checkbox-group qqpostt66"> 
+                                           <input id="checkiz001" type="checkbox"> 
+                                           <label for="checkiz001">
+                                           <span class="check mm_00"></span>
+                                           <span class="box mm_00"></span>
+                                           <p class="ft_text fntnn202">Select This Address</p>
+                                           </label>
+                                         </div>
+                                        
+                                        <div class="info_chart">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="third">John Heard</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Address : Kolkata, West Bengal, 785224, India</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Phone : +1 9856 552 523 </span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Email : johnheard007@gmail.com
+</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                
+                                
+                                <div class="hide_box1" style="display:none;">
+                                
+                                <div class="row">
+                                    	<div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">First Name</label>
+                                                <input class="from_type" placeholder="First Name" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Last Name</label>
+                                                <input class="from_type" placeholder="Last Name" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                    	<div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Email Address</label>
+                                                <input class="from_type" placeholder="Email Address" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Phone Number</label>
+                                                <input class="from_type" placeholder="Phone Number" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="details_box details_box_2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">Country</label>
+                                                    <!--<input class="from_type" placeholder="West Bengal" type="text">-->
+                                                    <select class="form_select">
+                                                        <option>India</option>
+                                                        <option>Canada</option>
+                                                        <option>Srilanka</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">State</label>
+                                                    <!--<input class="from_type" placeholder="West Bengal" type="text">-->
+                                                    <select class="form_select">
+                                                        <option>Option-1</option>
+                                                        <option>Option-2</option>
+                                                        <option>Option-3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">City</label>
+                                                    <!--<input class="from_type" placeholder="West Bengal" type="text">-->
+                                                    <select class="form_select">
+                                                        <option>Option-1</option>
+                                                        <option>Option-2</option>
+                                                        <option>Option-3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">Address</label>
+                                                    <input class="from_type" placeholder="Address" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="details_box details_box_2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Post Code</label>
+                                                <input class="from_type" placeholder="Post Code" type="text">
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                                    
+                                    
+                                    
+                                    <div class="details_box xmmx_top">
+                                	<!--<h3>Billing Address</h3>-->
+                                   
+                                    <!--<div class="card">
+                                        <label class="radio cclk10">
+                                        <input id="radio4" name="radios1" type="radio">
+                                        <span class="outer"><span class="inner"></span></span>Creat New Address</label>
+                                      <label class="radio cclk11">
+                                        <input id="radio5" name="radios1" type="radio">
+                                        <span class="outer"><span class="inner"></span></span>Use Saved Address</label>
+                                        
+                                      <div class="checkbox-group forr144"> 
+                                       <input id="checkiz1" type="checkbox"> 
+                                       <label for="checkiz1">
+                                       <span class="check"></span>
+                                       <span class="box"></span>
+                                       <p class="ft_text fntnn2">Billing Address same as Shipping</p>
+                                       </label>
+                                     </div>  
+                                        
+                                    </div>-->
+                                    
+                                    <!--<div class="below_cckc hide_box2" style="display:none;">
+                                	<div class="info_box">
+                                    	<h4>Address 1</h4>
+                                         
+                                         <div class="checkbox-group qqpostt66"> 
+                                           <input id="checkiz012" type="checkbox"> 
+                                           <label for="checkiz012">
+                                           <span class="check mm_00"></span>
+                                           <span class="box mm_00"></span>
+                                           <p class="ft_text fntnn202">Select This Address</p>
+                                           </label>
+                                         </div>
+                                         
+                                        <div class="info_chart">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="third">John Heard</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Address : Kolkata, West Bengal, 785224, India</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Phone : +1 9856 552 523 </span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Email : johnheard007@gmail.com
+</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info_box">
+                                    	<h4>Address 2</h4>
+                                        
+                                         <div class="checkbox-group qqpostt66"> 
+                                           <input id="checkiz003" type="checkbox"> 
+                                           <label for="checkiz003">
+                                           <span class="check mm_00"></span>
+                                           <span class="box mm_00"></span>
+                                           <p class="ft_text fntnn202">Select This Address</p>
+                                           </label>
+                                         </div>
+                                        
+                                        <div class="info_chart">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="third">John Heard</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Address : Kolkata, West Bengal, 785224, India</span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Phone : +1 9856 552 523 </span>
+                                                </li>
+                                                <li>
+                                                	<span class="third">Email : johnheard007@gmail.com
+</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>-->
+                                    
+                                    
+                                    <!--<div class="row">
+                                    	<div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">First Name</label>
+                                                <input class="from_type" placeholder="First Name" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Last Name</label>
+                                                <input class="from_type" placeholder="Last Name" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    	<div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Email Address</label>
+                                                <input class="from_type" placeholder="Email Address" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Phone Number</label>
+                                                <input class="from_type" placeholder="Phone Number" type="text">
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                
+                                    <!--<div class="details_box details_box_2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">Country</label>
+                                                    <select class="form_select">
+                                                        <option>India</option>
+                                                        <option>Canada</option>
+                                                        <option>Srilanka</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">State</label>
+                                                    <select class="form_select">
+                                                        <option>Option-1</option>
+                                                        <option>Option-2</option>
+                                                        <option>Option-3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">City</label>
+                                                    <select class="form_select">
+                                                        <option>Option-1</option>
+                                                        <option>Option-2</option>
+                                                        <option>Option-3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label class="name_label">Address</label>
+                                                    <input class="from_type" placeholder="Address" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="details_box details_box_2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                        	<div class="form-group">
+                                            	<label class="name_label">Post Code</label>
+                                                <input class="from_type" placeholder="Post Code" type="text">
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>-->
+                                    
+                                    
+                                    
+                                    <div class="details_box details_box_2">
+                                        <div class="row">
+                                            <div class="rightt_btn_twoo inin_66">
+                                             <input class="yy_c" value="Continue Shopping" type="button">
+                                             <input class="bb_c" value="Confirm & Pay" type="button">
+                                           </div>
+                                        </div>
+                                    </div>
+                                    
+                               
+                                    
+                            </div>
+                        </div>
+                      <!--form end-->
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            </form>
+                                            
+                                        </div>
+                                    </div>
+                          <!--table area-->
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+    </div>
+    <!--wrapper end-->
+    
+    
+    
+    
+    
+    
+    <footer>
+        	<div class="top_footer">
+            	<div class="container">
+                    
+                    	<div class="footer_mb01">
+                        	<div class="fot_box">
+                            	<h3>Contact</h3>
+                                <ul class="address">
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i> (+92) 4758 - 1425</li>
+                                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@msecommerce.com</a></li>
+                                    <li class="help"><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help</a></li>
+                            	</ul>
+                            </div>
+                        </div>
+                        
+                        <div class="footer_mb02">
+                        	<div class="fot_box">
+                            	<h3>Follow us</h3>
+                                <ul class="fot-social">
+                                	<li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="footer_mb03">
+                        	<div class="fot_box">
+                            	<h3>Information </h3>
+                                <ul class="make_ul">
+                                	<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About us</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
+                                    
+                                </ul>
+                                <ul class="make_ul">
+                                	<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy & Policy</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Terms & Conditions</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Shipping & Delivery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <div class="below_footer">
+            	<div class="container">
+                	<div class="row">
+                    	<p>© 2017  MsEcommerce.com  |   All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,6 @@
+Are you sure you did all the required changes?
+ As there some changes didn't happen like removing shipping charge
+ Also as we discussed before you will put a field for Google API Address?
+ Also you didn't change the * color to RED
+ And many more...
+ Could you check the file again and make sure everything done

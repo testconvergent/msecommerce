@@ -1,0 +1,12 @@
+1. without check any option, button does not submit. stop with java script 
+2. parent display order(asc) should be on the category list.
+3. button does not change its shape when it hover on.
+4. lagend on admin panel should be on the right hand side.
+5. Rnameing setting with delivery stauff with out sub menu.
+6.Renaming add delivery user to add delivery stuff.
+7. display order on Add category get a suggestion when he type with already registred order number.
+8.product details page should be well designed.
+9. admin delete users when they are not varified email address.
+10 marker on map.
+11 name 'Commision pay' change to charges pay.
+12 branch location header move on to the top.

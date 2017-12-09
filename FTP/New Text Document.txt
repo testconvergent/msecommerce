@@ -1,0 +1,9 @@
+Database:
+
+Username : infoscr_msecomme
+Password: lWIkn%Cm+#wu
+
+cpanel
+
+Username: infoscr
+Password: pkRl~MCg^T&&^ER

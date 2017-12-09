@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Finance</title>
+	<!--style-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--bootstrape-->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--font-awesome-->
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet"> 
+    
+    
+    
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>    
+
+
+<!--mega_menu_js-->
+<script src="js/pinterest_grid.js"></script>
+    
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* Menu Start */
+		$('#sm').mouseover(function(){
+			$(this).show();
+		});
+		$('#sm').mouseout(function(){
+			$(this).hide();
+		});
+		
+		$('#m1').mouseover(function(){
+			$('.all_menu').show();
+			$('').hide();
+			$('#sm').show();
+			$('.all_menu').pinterest_grid({
+				no_columns: 4,
+				padding_x: 10,
+				padding_y: 10,
+				margin_bottom: 50,
+				single_column_breakpoint: 700
+			});
+		});
+		
+		
+		$('#m1, #m2 ').mouseleave(function(){
+			$('#sm').hide();
+			$('#sm1, #sm2').hide();
+		});
+		/* Menu Start */
+	});
+</script>
+
+
+<style>
+	#blog-landing {
+		position: absolute;
+		max-width: 1170px;
+		width: 100%;
+		top:42px;
+	}
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $(".menu_dash").mouseenter(function(){
+        $(".dropdown_dash").slideDown();
+    });
+	$(".dropdown_dash").mouseleave(function(){
+		$(".dropdown_dash").slideUp();
+	});
+});
+</script> 
+
+
+    
+    
+</head>
+
+<body>
+	<!--wrapper start-->
+    <div class="wrapper">
+    	<header>
+        	<div class="top_header">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-3 col-sm-3 col-xs-12 logo">
+                        	<a href="#">
+                            	<img src="images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-9 make_search">
+                        	<div class="search_head">
+                            	<input class="type_search" type="text" placeholder="Search for Products, Brands and More">
+                                <button class="submit_search" type="submit"><img src="images/search_icon.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 make_log after_login no_pad_l">
+                            <div class="log_cart">
+                            	<ul>
+                                	<!--<li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a></li>-->
+                                    <li><span class="cart_item">0</span><a href="#">
+                                    <!--<i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+                                    <img src="images/cart.png" alt="">
+                                    </a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="dashboard_header">
+                              <div class="menu_dash">
+                                 <span class="uu_roundd"><img alt="" src="images/hi_image.png"></span>
+                                 <p> Hi, Seller  Name</p>
+                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                 <div class="clearfix"></div>
+                              </div>
+                              <div class="dropdown_dash" style="display:none;">
+                                 <ul>
+                                   <li><a href="#"><i class="fa fa-user ad_tt" aria-hidden="true"></i> My profile</a></li>
+                                   <li><a href="#"><i class="fa fa-cog ad_tt" aria-hidden="true"></i> Settings</a></li>
+                                   <li><a href="#"><i class="fa fa-sign-out ad_tt" aria-hidden="true"></i> Logout</a></li>
+                                 </ul>
+                              </div>
+            		   	   </div>
+                            
+                            <!--<div class="language">
+                            	 <div class="dropdown">
+                                  	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> <img src="images/flag_1.png" alt="">
+                                  	  <span class=""><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#"><img src="images/flag_1.png" alt=""></a></li>
+                                      </ul>
+                                 </div> 
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_area">
+            	<div class="container">
+                	<div class="row">
+                    	
+                        <nav class="navbar navbar-inverse">
+                    		<div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li><a id="m1" class="#" href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Category <i class="fa fa-caret-down make_arrow" aria-hidden="true"></i> </a></li>
+                                    <li><a href="#">All Offers</a> </li>
+                                    <li><a href="#">Mobile & Tablets</a> </li>
+                                    <li><a href="#">Electronics</a> </li>
+                                    <li><a href="#">Computers & Gaming</a> </li>
+                                    <li><a href="#">Home & Kitchen</a> </li>
+                                    
+                                </ul>
+                            </div>
+            			</nav>
+                        
+            			<div class="menu-expend">
+                        	<div class="container">
+                            
+					  			<div class="cnt all_menu">
+                                    <div id="sm" class="nwsubmnu" style="display:none;">
+                                        <!-- Product Section -->
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/electronis.png" alt=""> Electronics</a>
+                                                <ul>
+                                                    <li><a href="#">Mobiles</a></li>
+                                                    <li><a href="#">Mobile Accessories</a></li>
+                                                    <li><a href="#">Laptop</a></li>
+                                                    <li><a href="#">Smart Wearable Tech</a></li>
+                                                    <li><a href="#">Desktop PCs</a></li>
+                                                    <li><a href="#">Televisions</a></li>
+                                                    <li><a href="#">Camera</a></li>
+                                                    <li><a href="#">Camera Accessories</a></li>
+                                                    <li><a href="#">Tablets</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/afeliation.png" alt=""> Appliances</a>
+                                                <ul>
+                                                    <li><a href="#">Washing Machine</a></li>
+                                                    <li><a href="#">Refrigerators</a></li>
+                                                    <li><a href="#">Air Conditioners</a></li>
+                                                    <li><a href="#">Geysers</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin blog-landin_graw">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/fashion.png" alt=""> Men's Fashion</a>
+                                                <ul>
+                                                    <li><a href="#">Footwear</a></li>
+                                                    <li><a href="#">Sports wear</a></li>
+                                                    <li><a href="#">Top wear</a></li>
+                                                    <li><a href="#">Innerwear & Sleepwear</a></li>
+                                                    <li><a href="#">Ties, Socks, Caps & more</a></li>
+                                                    <li><a href="#">Kurta, Pyjama & more</a></li>
+                                                    <li><a href="#">Winter wear</a></li>
+                                                    <li><a href="#">Sneakers</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/shoes.png" alt=""> Women's Fashion</a>
+                                                <ul>
+                                                    <li><a href="#">Clothing</a></li>
+                                                    <li><a href="#">Western Wear</a></li>
+                                                    <li><a href="#">Lingerie & Sleepwear</a></li>
+                                                    <li><a href="#">Sandals</a></li>
+                                                    <li><a href="#">Ethnic Wear</a></li>
+                                                    <li><a href="#">Jewellery</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/kids.png" alt=""> Baby & Kids</a>
+                                                <ul>
+                                                    <li><a href="#">Kids Clothing</a></li>
+                                                    <li><a href="#">Boys' Clothing</a></li>
+                                                    <li><a href="#">Kids Footwear</a></li>
+                                                    <li><a href="#">Boys' Footwear</a></li>
+                                                    <li><a href="#">Toys</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/home.png" alt=""> Home & Furniture</a>
+                                                <ul>
+                                                    <li><a href="#">Kitchen & Dining</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Home Decor</a></li>
+                                                    <li><a href="#">Gas Stoves</a></li>
+                                                    <li><a href="#">Lighting</a></li>
+                                                    <li><a href="#">House Keeping & Laundry</a></li>
+                                                    <li><a href="#">Blankets, Quilts & Dohars</a></li>
+                                                    <li><a href="#">Towels</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin blog-landin_graw">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/bool.png" alt=""> Books & More</a>
+                                                <ul>
+                                                    <li><a href="#">Entrance Exams</a></li>
+                                                    <li><a href="#">Academic</a></li>
+                                                    <li><a href="#">Literature & Fiction</a></li>
+                                                    <li><a href="#">Indian Writing</a></li>
+                                                    <li><a href="#">Biographies</a></li>
+                                                    <li><a href="#">Children</a></li>
+                                                    <li><a href="#">Business</a></li>
+                                                    <li><a href="#">Self Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/sports.png" alt=""> Gaming & Accessories</a>
+                                                <ul>
+                                                    <li><a href="#">PS4</a></li>
+                                                    <li><a href="#">Xbox One</a></li>
+                                                    <li><a href="#">Xbox 360</a></li>
+                                                    <li><a href="#">Gaming Consoles</a></li>
+                                                    <li><a href="#">Smart Glasses(VR)</a></li>
+                                                    <li><a href="#">Comics</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="blog-landin">
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/ball.png" alt=""> Sports</a>
+                                                <ul>
+                                                    <li><a href="#">Cricket</a></li>
+                                                    <li><a href="#">Badminton</a></li>
+                                                    <li><a href="#">Football</a></li>
+                                                    <li><a href="#">Camping & Hiking</a></li>
+                                                    <li><a href="#">Swimming</a></li>
+                                                    <li><a href="#">Table Tennis</a></li>
+                                                    <li><a href="#">Tennis</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="white-panel">
+                                                <a class="title" href="#"><img src="images/meter.png" alt=""> Car & Bike Accessories</a>
+                                                <ul>
+                                                    <li><a href="#">Car Body Cover</a></li>
+                                                    <li><a href="#">Bike Body Cover</a></li>
+                                                    <li><a href="#">Car Air Freshener</a></li>
+                                                    <li><a href="#">Vehicle Washing & Cleaning</a></li>
+                                                    <li><a href="#">Car Sun Shade</a></li>
+                                                    <li><a href="#">Bike Body Cover</a></li>
+                                                    <li><a href="#">Car Air Freshener</a></li>
+                                                    <li><a href="#">Car Mat</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- Product Section -->
+                                     </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+            			
+                   
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        
+        <section class="body_section">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-md-12">
+                    	<div class="inner_head inner_head_2">
+                        	<h2>Seller Dashboard</h2>
+                        	<span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                    	<div class="dash_board">
+                        	<div class="left_dash">
+                            	<ul>
+                                	<li><a href="#"><img src="images/dash_1.png" alt=""> Dashboard</a></li>
+                                    <li><a href="#"><img src="images/dash_2.png" alt=""> Edit Profile</a></li>
+                                    <li><a href="#"><img src="images/dash_3.png" alt=""> Add Products</a></li>
+                                    <li><a href="#"><img src="images/dash_6.png" alt=""> My Products</a></li>
+                                    <li><a href="#"><img src="images/dash_7.png" alt=""> My Sales</a></li>
+                                    <li class="active"><a href="#"><img src="images/dash_8.png" alt=""> Finance</a></li>
+                                </ul>
+                            </div>
+                            <div class="board_details">
+                            	<h2 class="dash_head">Finance</h2>
+                                
+                                <div class="in_boxx1 da_forr5">
+                                    <span><img src="images/s006.png" alt=""></span>
+                                    <h3>Gross Earning</h3>
+                                    <h4>$2344567</h4>
+                                </div>
+                                
+                                <div class="in_boxx1 da_forr5">
+                                    <span><img src="images/s007.png" alt=""></span>
+                                    <h3>Net Earning</h3>
+                                    <h4>$123450</h4>
+                                </div>
+                                
+                                <div class="in_boxx1 da_forr5 no_mrg_rr">
+                                    <span><img src="images/s008.png" alt=""></span>
+                                    <h3>Commision Paid</h3>
+                                    <h4>$21000</h4>
+                                </div>
+                                
+                                
+                                <!--table area-->
+                                <div class="wish_listt botom_mg">
+                                	
+                                    <div class="trip_table finance_table">
+                                    	<div class="">
+                                        	<div class="table">
+                                            	
+                                                <div class="one_row1 hidden-xs">
+                                                    <div class="cell1 tab_head_sheet">Order No</div>
+                                                    <div class="cell1 tab_head_sheet">Order Total</div>
+                                                    <div class="cell1 tab_head_sheet">Commission</div>
+                                                    <div class="cell1 tab_head_sheet">Earning</div>
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$1500</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$1500</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$1500</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="one_row1 small_screen31 small_1">
+                                                	<div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order No </span>
+                                                        <p class="add_ttrr">#234566</p>
+                                                    </div>
+                                                	
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Order Total</span>
+                                                        <p class="add_ttrr">$2500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Commission</span>
+                                                        <p class="add_ttrr">$500</p>
+                                                    </div>
+                                                    
+                                                    <div class="cell1 tab_head_sheet_1 nn_rbnn">
+                                                    	<span class="W55_1">Earning</span>
+                                                        <p class="add_ttrr">$2000</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!--table area-->
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <!--wrapper end-->    
+        
+        
+        
+        
+        <footer>
+        	<div class="top_footer">
+            	<div class="container">
+                    
+                    	<div class="footer_mb01">
+                        	<div class="fot_box">
+                            	<h3>Contact</h3>
+                                <ul class="address">
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i> (+92) 4758 - 1425</li>
+                                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@msecommerce.com</a></li>
+                                    <li class="help"><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help</a></li>
+                            	</ul>
+                            </div>
+                        </div>
+                        
+                        <div class="footer_mb02">
+                        	<div class="fot_box">
+                            	<h3>Follow us</h3>
+                                <ul class="fot-social">
+                                	<li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="footer_mb03">
+                        	<div class="fot_box">
+                            	<h3>Information </h3>
+                                <ul class="make_ul">
+                                	<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About us</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQ</a></li>
+                                    
+                                </ul>
+                                <ul class="make_ul">
+                                	<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy & Policy</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Terms & Conditions</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Shipping & Delivery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <div class="below_footer">
+            	<div class="container">
+                	<div class="row">
+                    	<p>© 2017  MsEcommerce.com  |   All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    
+    
+   
+</body>
+</html>
