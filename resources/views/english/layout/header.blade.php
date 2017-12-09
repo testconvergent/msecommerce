@@ -250,7 +250,8 @@ $('[class="type_search"]').keyup(function(e){
 			$('.autocomplete_search ul li:nth-child('+countUpDownArrow+')').css('background','#ccc');
 		}
         break;
-		case 13: // up
+		case 13: // enter
+		console.log('sffff',countUpDownArrow);
 		var redirectUrl=$('.autocomplete_search ul li:nth-child('+countUpDownArrow+')').attr('data-link');
 		console.log(redirectUrl);
         break;
