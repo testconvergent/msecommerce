@@ -8,9 +8,9 @@
        
 	<div class="bread_cc">
         <p>Home <img src="images/arrow1.png" alt="img01"></p>
-        <p>Mobiles & Accessories <img src="images/arrow1.png" alt="img01"></p>
-        <p>Mobiles <img src="images/arrow1.png" alt="img01"></p>
-        <p>Samsung Mobiles</p>
+        <p>{{@$product->parent_cat_name}} <img src="images/arrow1.png" alt="img01"></p>
+        <p>{{@$product->sub_cat_name}} <img src="images/arrow1.png" alt="img01"></p>
+        <p>{{@$product->product_title}}</p>
 	</div>
        
        
@@ -19,10 +19,11 @@
             <div id="thumbnail-slider" style="float:left;">
             <div class="inner">
                 <ul>
-                    <li><a class="thumb" href="images/s_mobile1.jpg"></a></li>
-                    <li><a class="thumb" href="images/s_mobile2.jpg"></a></li>
-                    <li><a class="thumb" href="images/s_mobile3.jpg"></a></li>
-                    <li><a class="thumb" href="images/s_mobile2.jpg"></a></li>
+					@if(!$image->isEmpty())
+						@foreach($image as $img)
+							<li><a class="thumb" href="{{url('storage/app/public/product_image/thumb/'.$img->product_image)}}"></a></li>
+						@endforeach
+                    @endif
                 </ul>
             </div>
             </div>
@@ -30,10 +31,11 @@
 	        <div id="ninja-slider" style="float:left;">
             <div class="slider-inner">
                 <ul>
-                    <li><a class="ns-img" href="images/b_bomile.png"></a></li>
-                    <li><a class="ns-img" href="images/b_mobile1.jpg"></a></li>
-                    <li><a class="ns-img" href="images/b_mobile2.jpg"></a></li>
-                    <li><a class="ns-img" href="images/b_mobile1.jpg"></a></li>
+					@if(!$image->isEmpty())
+						@foreach($image as $img)
+							<li><a class="ns-img" href="{{url('storage/app/public/product_image/'.$img->product_image)}}"></a></li>
+						@endforeach
+                    @endif
                 </ul>
                 
                 <!--<div class="fs-icon" title="Expand/Close"></div>-->
@@ -48,25 +50,36 @@
       
     <!--desc right-->
     <div class="right_side_descc"> 
-       <h2>Samsung Galaxy On Max (Black, 32 GB) (4 GB RAM)</h2>
+       <h2>{{@$product->product_title}}</h2>
        
        
        <div class="rev_rett">
          <ul>
-            <li><img src="images/star_big1.png" alt=""></li>
-            <li><img src="images/star_big1.png" alt=""></li>
-            <li><img src="images/star_big1.png" alt=""></li>
-            <li><img src="images/star_big1.png" alt=""></li>
-            <li><img src="images/star_big2.png" alt=""></li>
+		 <?php 
+		$product_review = floor(@$product->ave_review);
+		for($i=1;$i<=5;$i++){
+			if($i <= $product_review){
+		?>
+			 <li><img src="images/star_big1.png" alt=""></li>
+		<?php
+			}
+			else
+			{
+			?>
+				<li><img src="images/star_big2.png" alt=""></li>
+			<?php
+			}
+		} ?>
+           
          </ul>
          
-          <span>(16,831 Ratings & 4,129 Reviews)</span>
+          <span>({{number_format(@$product->total_review)}} Ratings & 4,129 Reviews)</span>
        </div>
        
        <h3><span>Rs.28,900</span> Rs.21,624 </h3>
        
-       <p><span>Availability :</span> In Stock</p>
-       <p><span>Product Type :</span> Electronics</p>
+       <p><span>Availability :</span> @if($product->product_in_stock == 1){{'In Stock'}}@else {{'Out of Stock'}}@endif</p>
+       <p><span>Product Type :</span> {{@$product->parent_cat_name}}</p>
        <p><span>Warranty :</span> 1 Year Manufacturer Warranty</p>
        
        <div class="pd_color">
@@ -138,33 +151,29 @@
 <div class="prodd_desc">
 
 <h2 class="heading_style">product description</h2>
-<p>{{@$s_product->product_title}}</p>
+<p>{{@$product->product_description}}</p>
 
 <h2 class="heading_style">Specifications</h2>
 
-<ul class="spe_infoo5">
-	<li>Brand</li>
-    <li>In The Box</li>
-    <li>Model Number</li>
-    <li>Model Name</li>
-    <li> Color</li>
-    <li>Browse Type</li>
-    <li>SIM Type</li>
-    <li>SIM Size</li>
+<ul class="">
+	<?php
+	$optionrray = array();
+	foreach($select_value as $key=>$marray_val){
+		$optionrray[$key] = $marray_val->option_detail_id;
+	}
+	?>
+	@if(!$fetch_value->isEmpty())
+		@foreach($fetch_value as $key=>$val)
+			<li class="spe_infoo5">{{@$val->option_name}}</li>
+			@foreach($val->option_value as $op_val)
+				<li class="spe_infoo6">@if(in_array($op_val->option_detail_id ,@$optionrray)){{@$op_val->option_name}}@endif</li>
+			@endforeach
+			<div class="clearfix"></div>
+		@endforeach
+	@endif
+	
+    
 </ul>
-
-<ul class="spe_infoo6">
-	<li>Lenovo</li>
-    <li>Handset, Adaptor, Earphone, User</li>
-    <li>SM-G570FZKGINS</li>
-    <li>Galaxy J5 Prime</li>
-    <li>Black</li>
-    <li>Smartphones</li>
-    <li>Dual Sim</li>
-    <li>Normal</li>
-</ul>
-
-
 </div>
 </div>
  <section class="body_2">
@@ -243,23 +252,36 @@
 
             
             <div class="tab-pane fade for_revieww active in">
-              <div class="revv_boxx">
-                <h2>Excellent product...exactly the same as shown..quality of silk is very good...my mother loved it..</h2>
-                <ul>
-                 <li><img src="images/star_new1.png" alt=""></li>
-          		 <li><img src="images/star_new1.png" alt=""></li>
-          		 <li><img src="images/star_new1.png" alt=""></li>
-				 <li><img src="images/star_new1.png" alt=""></li>
-          		 <li><img src="images/star_new2.png" alt=""></li>
-                 <span>(4)</span>
-                </ul>
-                <h6><img src="images/calendar.png" alt=""> 23-05-2015</h6>
-                <h6><img src="images/userr.png" alt=""> By Rickii Jones</h6>
-                <p>Most beautiful Saree. It z same as described. Actually looking better. Was a Gift for my Mother and she loved it. I just saw her glittering eyes. Thank you Smart Retail. Thank you Trendz.</p>
-                <a href="#">View More &gt;&gt;</a>
-              </div>
-            </div>
-           
+				@if(!$review->isEmpty())
+					@foreach($review as $rev)
+					  <div class="revv_boxx">
+						<h2>{{@$rev->review_title}}</h2>
+						<ul>
+						<?php 
+						$revi = floor(@$rev->review_point);
+						for($i=1;$i<=5;$i++){
+							if($i <= $revi){
+						?>
+							<li><img src="images/star_new1.png" alt=""></li>
+						<?php
+							}
+							else
+							{
+							?>
+								<li><img src="images/star_new2.png" alt=""></li>
+							<?php
+							}
+						} ?>
+						 <span>({{$revi}})</span>
+						</ul>
+						<h6><img src="images/calendar.png" alt=""> {{date('d-m-Y',strtotime($rev->review_date))}}</h6>
+						<h6><img src="images/userr.png" alt=""> By {{$rev->first_name}} {{$rev->last_name}}</h6>
+						<p class="show">{{@$rev->review_desc}}</p>
+					  </div>
+					  @endforeach
+			@endif
+				</div>
+				
           </div>
          </div>           
                     
@@ -282,5 +304,50 @@
     top: 0;
 	opacity:0.7;
 }
+.body{padding:0; margin:0;}
+.main_ctnt {
+    border: 1px solid #000000;
+    margin: 100px;
+    padding: 15px;
+    width: 650px;
+}
+.show {
+    font:normal 15px arial;
+    text-align: justify;
+	padding: 15px 0 0 0;
+}
+.morectnt span {
+display: none;
+}
+.showmoretxt {
+    font: bold 15px tahoma;
+    text-decoration: none;
+}
 </style>
+<script>
+$(function() {
+var showTotalChar = 200, showChar = "View More >>", hideChar = "<< View Less";
+$('.show').each(function() {
+var content = $(this).text();
+if (content.length > showTotalChar) {
+var con = content.substr(0, showTotalChar);
+var hcon = content.substr(showTotalChar, content.length - showTotalChar);
+var txt= con +  '<span class="dots">...</span><span class="morectnt"><span>' + hcon + '</span>&nbsp;&nbsp;<a href="" class="showmoretxt">' + showChar + '</a></span>';
+$(this).html(txt);
+}
+});
+$(".showmoretxt").click(function() {
+if ($(this).hasClass("sample")) {
+$(this).removeClass("sample");
+$(this).text(showChar);
+} else {
+$(this).addClass("sample");
+$(this).text(hideChar);
+}
+$(this).parent().prev().toggle();
+$(this).prev().toggle();
+return false;
+});
+});
+</script>
 @endsection
